@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export async function getServerSideProps() {
+
+export async function getStaticProps() {
   console.log("server");
 
   return {
@@ -10,7 +10,8 @@ export async function getServerSideProps() {
   }
 }
 
-export default function Home({time}) {
+export default function SSG({time}) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -21,16 +22,6 @@ export default function Home({time}) {
       <main>
         <h1 className={styles.title}>
           {time}
-        </h1>
-        <h1>
-          <Link href="/csr">
-            CSR로
-          </Link>
-        </h1>
-        <h1>
-          <Link href="/csr">
-            SSG로
-          </Link>
         </h1>
       </main>
 
