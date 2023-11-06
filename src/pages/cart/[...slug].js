@@ -2,17 +2,17 @@ import Layout from 'components/Layout';
 import SubLayout from 'components/SubLayout';
 import { useState } from 'react';
 
-export default function FirstItem() {
+export default function cartSlug() {
   const [time, setTime] = useState();
 
   return (
     <>
-      <h1>First Item</h1>
+      <h1>cart Slug</h1>
     </>
   );
 }
 
-FirstItem.getLayout = function getLayout(page) {
+cartSlug.getLayout = function getLayout(page) {
   return (
     <Layout>
       <SubLayout>{page}</SubLayout>
