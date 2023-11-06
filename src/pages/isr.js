@@ -1,18 +1,16 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
-
 export async function getStaticProps() {
-  console.log("server");
+  console.log('server');
 
   return {
-    props     : { time: new Date().toISOString() },
+    props: { time: new Date().toISOString() },
     revalidate: 1,
-  }
+  };
 }
 
-export default function ISR({time}) {
-
+export default function ISR({ time }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,9 +19,7 @@ export default function ISR({time}) {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          {time}
-        </h1>
+        <h1 className={styles.title}>{time}</h1>
       </main>
 
       <footer>

@@ -8,13 +8,11 @@ export default function CSR() {
   useEffect(() => {
     console.log('client');
     setTime(new Date().toISOString());
-  },[])
+  }, []);
 
   return (
     <>
-      <h1>
-        {time}
-      </h1>
+      <h1>{time}</h1>
     </>
   );
 }
@@ -24,5 +22,5 @@ CSR.getLayout = function getLayout(page) {
     <Layout>
       <SubLayout>{page}</SubLayout>
     </Layout>
-  )
-}
+  );
+};
