@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   //     <Component {...pageProps} />
   //   </Layout>
   // )
-  console.log('pageProps = ', pageProps);
+  // console.log('pageProps = ', pageProps);
   const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
 
   return getLayout(<Component {...pageProps} />);
