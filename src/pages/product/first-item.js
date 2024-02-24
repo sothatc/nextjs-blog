@@ -1,15 +1,8 @@
-import Layout from 'components/Layout';
-import SubLayout from 'components/SubLayout';
-import { useState } from 'react';
+import Layout from "components/Layout";
+import SubLayout from "components/SubLayout";
 
 export default function FirstItem() {
-  const [time, setTime] = useState();
-
-  return (
-    <>
-      <h1>First Item</h1>
-    </>
-  );
+  return <h1 className="title">First Item</h1>;
 }
 
 FirstItem.getLayout = function getLayout(page) {

@@ -1,6 +1,6 @@
+import Layout from 'components/Layout';
+import SubLayout from 'components/SubLayout';
 import { useEffect, useState } from 'react';
-import Layout from '../components/Layout';
-import SubLayout from '../components/SubLayout';
 
 export default function CSR() {
   const [time, setTime] = useState();
@@ -10,11 +10,7 @@ export default function CSR() {
     setTime(new Date().toISOString());
   }, []);
 
-  return (
-    <>
-      <h1>{time}</h1>
-    </>
-  );
+  return <h1 className="title">{time}</h1>;
 }
 
 CSR.getLayout = function getLayout(page) {

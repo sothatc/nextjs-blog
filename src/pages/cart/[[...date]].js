@@ -1,24 +1,25 @@
-import Layout from 'components/Layout';
-import SubLayout from 'components/SubLayout';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import Layout from "components/Layout";
+import SubLayout from "components/SubLayout";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-export default function cartSlug() {
+export default function CartDateSlug() {
   const router = useRouter();
   const {date} = router.query;
-console.log("date = ", date);
+
   return (
     <>
-      <h1>{JSON.stringify(date)}</h1>
-      {/* <h1>{slug}</h1> */}
-      <Link href="/cart/2022/11/07">2023년 11월 7일로</Link>
-      <button onClick={()=>router.push("/cart/2023/09/10")}>2023년9월10일로</button>
+      <h1 className="title">Cart Date Slug {JSON.stringify(date)}</h1>
+      <Link href="/cart/2024/02/24">
+        <a>2024년 2월 24일</a>
+      </Link>
+      <br/>
+      <button onClick={() => router.push('/cart/2024/02/30')}>2024년 2월 30일로</button>
     </>
   );
 }
 
-cartSlug.getLayout = function getLayout(page) {
+CartDateSlug.getLayout = function getLayout(page) {
   return (
     <Layout>
       <SubLayout>{page}</SubLayout>
